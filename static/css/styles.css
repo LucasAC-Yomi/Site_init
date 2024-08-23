@@ -1,0 +1,22 @@
+body, ul, li, p{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: arial, sans-serif;
+    font-size: 1.2rem;
+    color: #111111;
+}
+
+body{
+    background: silver;
+}
+
+a{
+    text-decoration: none;
+    color: red;
+}
+
+h1{
+    text-align: center;
+    margin-top: 60px;
+}

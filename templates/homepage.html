@@ -1,0 +1,55 @@
+{% extends "index.html" %}
+
+{% block title %}
+Homepage
+{% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/menubar.css') }}"> 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/homepage.css') }}"> 
+{% endblock %}
+
+{% block body %}
+
+<body>
+  <header class="header">
+    <a href="/"><img class="imgLogo" src="/static/img/Logo.png"></a>
+    <nav>
+      <ul class="menuBar">
+        {% if user %}
+        <li><a href="/">Olá, {{ user[0].user }}</a></li>
+        <li><a href="/logout">Sair</a></li>
+        {% else %}
+        <li><a href="/login">Entrar</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+  </header>
+  
+  <h1>Bem vindo!</h1>
+  
+{% if user %}
+  <section class="flexBox">
+    <div>
+      <p>Seu usuário é: {{ user[0].user }}</p>
+      <p>Sua email é: {{ user[0].email }}</p>
+      <p>Manter-me: {{ user[2] }}</p>
+    </div>
+    <div>
+      <p>Seu usuário é: {{ user[0] }}</p>
+      <p>Sua senha é: {{ user[1] }}</p>
+      <p>Manter-me: {{ user[2] }}</p>
+    </div>
+    <div>
+      <p>Seu usuário é: {{ user[0] }}</p>
+      <p>Sua senha é: {{ user[1] }}</p>
+      <p>Manter-me: {{ user[2] }}</p>
+    </div>
+  </section>
+{% else %}
+  
+{% endif %}
+  
+</body>
+
+{% endblock %}

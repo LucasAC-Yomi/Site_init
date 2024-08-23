@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% block title %}
+Login
+{% endblock %}
+
+{% block css %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login-logout.css') }}"> 
+{% endblock %}
+
+{% block body %}
+
+<body class="wallLogin">
+    <div class="box">
+        <h1>ENTRAR</h1>
+        <form action="{{ url_for('login') }}" method="post">
+            <section class="flexBox flexBoxLogin">
+                <div class="animation-item">
+                    <input type="text" id="username" name="username" autocomplete="off" required value="">
+                    <label for="username">Username</label>
+                </div>
+                <div class="animation-item">
+                    <input type="password" id="password" name="password" autocomplete="off" required value="">
+                    <label for="password">Password</label>
+                </div>
+                <div>
+                    <input type="checkbox" id="permanecer" name="permanecer"/>
+                    <label for="permanecer">Manter-me logado</label>
+                    <a href="/">Esqueceu a senha?</a>
+                </div>
+                <button type="submit">Entrar</button>
+                <div>
+                    <a href="/cadastro">Não tenho uma conta</a>
+                </div>
+            </section>
+        </form>
+    </div>
+</body>
+
+{% endblock %}

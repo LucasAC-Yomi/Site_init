@@ -1,0 +1,30 @@
+.imgLogo{
+    display: block;
+    width: 60px;
+    height: 60px;
+}
+
+.header{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background: #111111;
+}
+
+.menuBar{
+    display: flex;
+}
+
+.menuBar li{
+    display: block;
+    padding: 10px;
+    color: red;
+    /*background: tomato;*/
+}
+
+.menuBar a:hover{
+    transition: 0,25s;
+    color: silver;
+}

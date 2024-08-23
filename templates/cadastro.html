@@ -1,0 +1,36 @@
+{% extends "index.html" %}
+
+{% block title %}
+Cadastro
+{% endblock %}
+
+{% block css %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/login-logout.css') }}"> 
+{% endblock %}
+
+{% block body %}
+
+<body class="wallLogin">
+    <div class="box">
+        <h1>Cadastre-se</h1>
+        <form action="{{ url_for('cadastro') }}" method="post">
+            <section class="flexBox">
+                <div class="animation-item">
+                    <input type="text" id="username" name="username" autocomplete="off" required value="">
+                    <label for="username">Username</label>
+                </div>
+                <div class="animation-item">
+                    <input type="text" id="email" name="email" autocomplete="off" required value="">
+                    <label for="email">E-Mail</label>
+                </div>
+                <div class="animation-item">
+                    <input type="password" id="password" name="password" autocomplete="off" required value="">
+                    <label for="password">Password</label>
+                </div>
+                <button type="submit">Cadastrar</button>
+            </section>
+        </form>
+    </div>
+</body>
+
+{% endblock %}
