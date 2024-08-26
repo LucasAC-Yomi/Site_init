@@ -1,8 +1,13 @@
 from flask import Flask, render_template, request, redirect, url_for, session
 import connection as db
+from dotenv import load_dotenv
+import os
+
+load_dotenv('.env')
+KEY = os.getenv('KEY')
 
 app = Flask(__name__)
-app.secret_key='ok'
+app.secret_key = KEY
 
 @app.route("/", methods=['GET','POST'])
 def home(user=None,passw=None,check=None):
