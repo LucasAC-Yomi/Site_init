@@ -25,3 +25,8 @@ def select_usuario():
     result = Table.query(Usuario).all()
     Table.close()
     return result
+
+def cadastra_usuario():
+    Table = Session()
+    Table.execute('')#tentar fazer insert
+    Table.close()

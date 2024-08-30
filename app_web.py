@@ -21,17 +21,15 @@ def login():
     if request.method =='POST':
         username = request.form['username']
         password = request.form['password']
-        #erro caso o check esteja desmarcado
-        #checkbox = request.form['permanecer']
         session['username'] = username
         session['password'] = password
-        #session['permanecer'] = checkbox
         return redirect(url_for('home'))
     return render_template('login.html')
 
 @app.route("/cadastro", methods=['GET','POST'])
 def cadastro():
     if request.method =='POST':
+        #fazer o insert daqui
         username = request.form['username']
         email = request.form['email']
         password = request.form['password']
