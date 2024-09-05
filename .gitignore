@@ -1,1 +1,5 @@
 .env
+.vscode
+.vscode/extensions.json
+__pycache__
+__pycache__/app_web.cpython-311.pyc
